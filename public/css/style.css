@@ -1,5 +1,5 @@
 @import 'normalize.css';
-@import 'https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap'; 
 
 :root {
     --white-color: #ffffff;
@@ -21,26 +21,9 @@ html {
 }
 
 body {
-    font-size: 1.6rem;
-    font-family: "Krub", "Helvetica Neue", "Helvetica"
-}
-
-/* Tipografia */
-h1 {
-    font-size: 3.8rem;
-}
-h2 {
-    font-size: 2.8rem;
-}
-h3 {
-    font-size: 1.8rem;
-}
-h1,h2,h3 {
-    text-align: center;
-}
-
-.title span {
-    font-size: 2rem;
+    font-size: 1.6rem; /* 1 rem = 10px */
+    font-family: "Krub", "Helvetica Neue", "Helvetica";
+    background: linear-gradient(to top, var(--gray-light-color) 0%, var(--white-color) 100%);
 }
 
 .container {
@@ -67,6 +50,31 @@ h1,h2,h3 {
     }
 }
 
+/* -------- typography -------- */
+h1 {
+    font-size: 3.8rem;
+}
+
+h2 {
+    font-size: 2.8rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+h1,
+h2,
+h3 {
+    text-align: center;
+}
+
+/* -------- title -------- */
+.title span {
+    font-size: 2rem;
+}
+
+/* -------- navigation bar -------- */
 .background-nav {
     background-color: var(--secondary-color);
     top: 0;
@@ -103,6 +111,7 @@ h1,h2,h3 {
     color: var(--dark-color);
 }
 
+/* -------- hero location -------- */
 .hero {
     background: url(/public/img/hero.jpg) no-repeat;
     background-size: cover;
