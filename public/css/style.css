@@ -12,6 +12,15 @@
 
 html {
     font-size: 62.5%;
+    scroll-snap-type: y mandatory;
+}
+
+.service,
+.form,
+.footer,
+.main-navigation{
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
 }
 
 *,
@@ -85,7 +94,7 @@ h3 {
 
 /* Utilities */
 .w-sm-100 {
-    min-width: 100%;
+    width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -117,7 +126,6 @@ h3 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    z-index: -1;
 }
 
 @media (min-width: 768px) {
@@ -217,14 +225,14 @@ h3 {
 /*  contacts content */
 .form {
     background: var(--gray-color);
-    width: min(60rem, 100%);
+    width: min(80rem, 100%);
     /* Toma el valor mas pequenio de los campos */
     margin: 0 auto;
     border-radius: 1rem;
     padding: 2rem;
 }
 
-.form fieldset{
+.form fieldset {
     border: none;
 }
 
@@ -236,11 +244,21 @@ h3 {
 }
 
 .field-container {
-
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
 }
 
 .field {
     margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+
+    .field:nth-child(3),
+    .field:nth-child(4) {
+        grid-column: 1/3;
+    }
 }
 
 .field label {
@@ -250,9 +268,22 @@ h3 {
     display: block;
 }
 
+.field textarea {
+    height: 20rem;
+}
+
 .input-text {
     width: 100%;
     border: none;
     padding: 1.5rem;
     border-radius: .5rem;
+}
+
+/* footer styles */
+.footer {
+    text-align: center;
+    background: var(--secondary-color);
+    text-transform: uppercase;
+    padding: .5rem;
+    width: 100%;
 }
